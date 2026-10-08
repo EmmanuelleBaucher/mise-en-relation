@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recommandez-moi à vos proches</title>
+<style>
+  :root{
+    --navy:#1b2a4a; --gold:#c9a45c; --bg:#f4f6f9; --line:#d9dee7;
+    --text:#2b3445; --muted:#6b7385; --green:#2f8f5b; --greenbg:#eaf6ef;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--text);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+  .wrap{max-width:480px;margin:0 auto}
+  header{background:var(--navy);color:#fff;text-align:center;padding:28px 20px 22px}
+  .logo{width:56px;height:56px;margin:0 auto 14px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,"Times New Roman",serif;font-size:22px;letter-spacing:.06em;color:var(--gold)}
+  header h1{margin:0 0 8px;font-size:20px;line-height:1.3;font-weight:700}
+  header p{margin:0;font-size:12px;opacity:.7}
+  header .bar{width:44px;height:3px;background:var(--gold);margin:14px auto 0;border-radius:2px}
+  .benefits{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 16px;padding:16px 14px;font-size:12px;border-bottom:1px solid var(--line);background:#fff}
+  .benefits span{display:inline-flex;align-items:center;gap:6px}
+  .benefits i{width:20px;height:20px;border-radius:50%;background:#e6eaf2;display:inline-block;flex:none}
+  main{background:var(--bg);padding:18px 16px 24px}
+  .intro{font-size:13px;color:var(--muted);margin:0 0 16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:14px}
+  .card h2{margin:0 0 10px;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+  .card h3{margin:0 0 10px;font-size:13px;display:flex;align-items:center;gap:8px}
+  .badge{width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;display:inline-flex;align-items:center;justify-content:center}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+  label{display:block;font-size:11px;font-weight:600;color:var(--navy);margin-bottom:3px}
+  label .req{color:#c0392b}
+  input,textarea{width:100%;font:inherit;font-size:13px;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:#f8f9fb;color:var(--text)}
+  input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:0;background:#fff}
+  textarea{min-height:70px;resize:vertical}
+  .solidaire{background:var(--greenbg);border:1px solid #bfe3cf;border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:12px}
+  .solidaire strong{color:var(--green);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+  .solidaire a{color:var(--green);font-weight:600}
+  .add{width:100%;background:transparent;border:1.5px dashed #b7bfce;border-radius:10px;padding:12px;font:inherit;font-size:13px;color:var(--muted);cursor:pointer;margin-bottom:14px}
+  .add:hover{border-color:var(--navy);color:var(--navy)}
+  .remove{margin-left:auto;background:none;border:0;color:var(--muted);font-size:12px;cursor:pointer;text-decoration:underline}
+  .send{width:100%;background:var(--navy);color:#fff;border:0;border-radius:10px;padding:14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+  .send:hover{background:#13203a}
+  .note{text-align:center;font-size:11px;color:var(--muted);margin:12px 0 0}
+  .err{color:#c0392b;font-size:12px;text-align:center;margin:10px 0 0;min-height:16px}
+  footer{text-align:center;font-size:12px;padding:18px 16px 28px;color:var(--muted);border-top:1px solid var(--line)}
+  footer b{color:var(--navy)}
+  footer a{color:var(--navy);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo" aria-label="EB">EB</div>
+    <h1>Vous connaissez quelqu'un qui pourrait avoir besoin d'un accompagnement ?</h1>
+    <p>VOTRE PRÉNOM NOM — VOTRE ACTIVITÉ</p>
+    <div class="bar"></div>
+  </header>
+
+  <div class="benefits">
+    <span><i></i>Payer moins d'impôts</span>
+    <span><i></i>Préparer sa retraite</span>
+    <span><i></i>Sécuriser sa famille</span>
+    <span><i></i>Optimiser la rentabilité de ses placements</span>
+    <span><i></i>Préparer et optimiser la transmission de son patrimoine</span>
+  </div>
+
+  <main>
+    <p class="intro">Si vous connaissez des personnes qui pourraient bénéficier d'un accompagnement patrimonial, je serais ravie de les rencontrer. Remplissez ce formulaire et je prendrai contact avec elles avec tout le soin qu'elles méritent.</p>
+
+    <!-- Bloc optionnel "engagement solidaire" : décommentez et adaptez, ou supprimez
+    <div class="solidaire">
+      <strong>Engagement solidaire</strong><br>
+      1 % de mes commissions reversées à [NOM DE L'ASSOCIATION].
+    </div>
+    -->
+
+    <form id="form" novalidate>
+      <div class="card">
+        <h2>Vos coordonnées</h2>
+        <div class="row">
+          <div><label for="nom">Nom <span class="req">*</span></label><input id="nom" placeholder="Dupont" autocomplete="family-name"></div>
+          <div><label for="prenom">Prénom <span class="req">*</span></label><input id="prenom" placeholder="Marie" autocomplete="given-name"></div>
+        </div>
+      </div>
+
+      <div id="relations"></div>
+
+      <button type="button" class="add" id="add">+ Ajouter une mise en relation</button>
+      <button type="submit" class="send">Envoyer mes recommandations →</button>
+      <p class="err" id="err" role="alert"></p>
+      <p class="note">Votre message s'ouvre dans votre application mail habituelle.<br>Aucune donnée n'est transmise sans votre accord.</p>
+    </form>
+  </main>
+
+  <footer>
+    <b>VOTRE PRÉNOM NOM</b> · VOTRE ENTREPRISE<br>
+    Votre adresse · Code postal Ville<br>
+    <a href="tel:+33000000000">00 00 00 00 00</a> · <a href="mailto:votre@email.fr">votre@email.fr</a>
+  </footer>
+</div>
+
+<template id="tpl">
+  <div class="card rel">
+    <h3><span class="badge"></span> Mise en relation <button type="button" class="remove">Retirer</button></h3>
+    <div class="row">
+      <div><label>Nom <span class="req">*</span></label><input data-f="nom" placeholder="Martin"></div>
+      <div><label>Prénom <span class="req">*</span></label><input data-f="prenom" placeholder="Pierre"></div>
+    </div>
+    <div class="row">
+      <div><label>E-mail</label><input data-f="email" type="email" placeholder="pierre@exemple.fr"></div>
+      <div><label>Téléphone</label><input data-f="tel" type="tel" placeholder="06 00 00 00 00"></div>
+    </div>
+    <label>Note libre (contexte, meilleur moment pour appeler…)</label>
+    <textarea data-f="note" placeholder="Ex. : Indépendant, intéressé par la défiscalisation, disponible le matin."></textarea>
+  </div>
+</template>
+
+<script>
+  // ====== À PERSONNALISER ======
+  var DEST_EMAIL = "votre@email.fr";
+  var SUJET = "Recommandation – mise en relation";
+  var MAX = 10;
+  // =============================
+
+  var box = document.getElementById("relations");
+  var tpl = document.getElementById("tpl");
+  var err = document.getElementById("err");
+
+  function renumber(){
+    var cards = box.querySelectorAll(".rel");
+    cards.forEach(function(c,i){
+      c.querySelector(".badge").textContent = i+1;
+      c.querySelector(".remove").style.display = cards.length > 1 ? "" : "none";
+    });
+  }
+  function addRel(){
+    if (box.querySelectorAll(".rel").length >= MAX) return;
+    var node = tpl.content.cloneNode(true);
+    node.querySelector(".remove").addEventListener("click", function(e){
+      e.target.closest(".rel").remove(); renumber();
+    });
+    box.appendChild(node); renumber();
+  }
+  document.getElementById("add").addEventListener("click", addRel);
+  addRel();
+
+  document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    err.textContent = "";
+    var nom = document.getElementById("nom").value.trim();
+    var prenom = document.getElementById("prenom").value.trim();
+    if(!nom || !prenom){ err.textContent = "Merci d'indiquer votre nom et votre prénom."; return; }
+
+    var lines = ["Bonjour,","","Voici les personnes que je souhaite vous recommander :",""];
+    var count = 0;
+    box.querySelectorAll(".rel").forEach(function(c){
+      var g = function(k){ return c.querySelector('[data-f="'+k+'"]').value.trim(); };
+      if(!g("nom") && !g("prenom")) return;
+      count++;
+      lines.push("Personne " + count + " : " + g("prenom") + " " + g("nom"));
+      if(g("email")) lines.push("E-mail : " + g("email"));
+      if(g("tel")) lines.push("Téléphone : " + g("tel"));
+      if(g("note")) lines.push("Note : " + g("note"));
+      lines.push("");
+    });
+    if(!count){ err.textContent = "Ajoutez au moins une personne (nom et prénom)."; return; }
+    lines.push("Cordialement,", prenom + " " + nom);
+
+    window.location.href = "mailto:" + DEST_EMAIL +
+      "?subject=" + encodeURIComponent(SUJET) +
+      "&body=" + encodeURIComponent(lines.join("\n"));
+  });
+</script>
+</body>
+</html>
