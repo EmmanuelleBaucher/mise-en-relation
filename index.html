@@ -1,139 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Emmanuelle Baucher – Mise en relation</title>
-<style>
-  :root {
-    --navy: #1a2b4a;
-    --navy-2: #223760;
-    --gold: #c8a45d;
-    --ink: #1d2433;
-    --muted: #6b7587;
-    --line: #dde2ea;
-    --bg: #f3f5f9;
-    --field: #f7f8fb;
-    --error: #b3261e;
-    --error-bg: #fdecea;
-    color-scheme: light;
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0; background: var(--bg); color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px; line-height: 1.55;
-  }
-  .hero {
-    background: linear-gradient(180deg, var(--navy-2) 0%, var(--navy) 100%);
-    color: #fff; text-align: center; padding: 34px 20px 30px;
-  }
-  .hero h1 {
-    margin: 0 auto; max-width: 560px; font-size: 25px; line-height: 1.3;
-    font-weight: 700; letter-spacing: -0.01em;
-  }
-  .identity {
-    display: flex; align-items: center; justify-content: center; gap: 14px;
-    margin: 24px auto 0; max-width: 560px; text-align: left;
-  }
-  .monogram { flex: none; width: 46px; height: 46px; display: block; color: var(--gold); }
-  .monogram .ring { fill: none; stroke: currentColor; }
-  .monogram .glyph { fill: currentColor; }
-  .hero .by { margin: 0; font-size: 14px; line-height: 1.45; color: #c3cde0; letter-spacing: 0.02em; }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Emmanuelle Baucher – Mise en relation</title>
+  <style>
+    :root {
+      --navy: #1a2b4a;
+      --navy-2: #223760;
+      --gold: #c8a45d;
+      --ink: #1d2433;
+      --muted: #6b7587;
+      --line: #dde2ea;
+      --bg: #f3f5f9;
+      --field: #f7f8fb;
+      --error: #b3261e;
+      --error-bg: #fdecea;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px; line-height: 1.55;
+    }
+    .hero {
+      background: linear-gradient(180deg, var(--navy-2) 0%, var(--navy) 100%);
+      color: #fff; text-align: center; padding: 34px 20px 30px;
+    }
+    .hero h1 {
+      margin: 0 auto; max-width: 560px; font-size: 25px; line-height: 1.3;
+      font-weight: 700; letter-spacing: -0.01em;
+    }
+    .identity {
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+      margin: 24px auto 0; max-width: 560px; text-align: left;
+    }
+    .monogram { flex: none; width: 46px; height: 46px; display: block; color: var(--gold); }
+    .monogram .ring { fill: none; stroke: currentColor; }
+    .monogram .glyph { fill: currentColor; }
+    .hero .by { margin: 0; font-size: 14px; line-height: 1.45; color: #c3cde0; letter-spacing: 0.02em; }
 
-  .themes { background: #fff; border-bottom: 1px solid var(--line); padding: 22px 16px; }
-  .chips { max-width: 680px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 12px; }
-  .chip {
-    display: inline-flex; align-items: center; gap: 9px;
-    background: #f0f3f8; border: 1px solid #e3e8f0; border-radius: 999px;
-    padding: 5px 14px 5px 6px; font-size: 14px; color: #2a3550;
-  }
-  .ico {
-    flex: none; width: 28px; height: 28px; border-radius: 50%;
-    background: var(--navy); display: flex; align-items: center; justify-content: center;
-  }
-  .ico svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .themes { background: #fff; border-bottom: 1px solid var(--line); padding: 22px 16px; }
+    .chips { max-width: 680px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 12px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: #f0f3f8; border: 1px solid #e3e8f0; border-radius: 999px;
+      padding: 5px 14px 5px 6px; font-size: 14px; color: #2a3550;
+    }
+    .ico {
+      flex: none; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--navy); display: flex; align-items: center; justify-content: center;
+    }
+    .ico svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
-  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 36px; }
-  .lead { text-align: center; color: var(--muted); font-size: 15px; margin: 0 auto 22px; max-width: 54ch; }
+    main { max-width: 640px; margin: 0 auto; padding: 24px 16px 36px; }
+    .lead { text-align: center; color: var(--muted); font-size: 15px; margin: 0 auto 22px; max-width: 54ch; }
 
-  .card {
-    background: #fff; border: 1px solid var(--line); border-radius: 10px;
-    margin: 0 0 16px; box-shadow: 0 1px 2px rgba(26,43,74,0.05), 0 6px 18px rgba(26,43,74,0.04);
-    overflow: hidden; min-width: 0;
-  }
-  .card[hidden] { display: none; }
-  .card-body { padding: 18px 20px 20px; }
-  .card-head {
-    display: flex; align-items: center; gap: 10px; padding: 14px 20px;
-    background: #f8f9fc; border-bottom: 1px solid var(--line);
-  }
-  .card-head h2 { margin: 0; font-size: 15px; font-weight: 600; flex: 1; }
-  .badge {
-    width: 26px; height: 26px; border-radius: 50%; background: var(--navy); color: #fff;
-    font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center;
-  }
-  .label-s { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 14px; }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: 10px;
+      margin: 0 0 16px; box-shadow: 0 1px 2px rgba(26,43,74,0.05), 0 6px 18px rgba(26,43,74,0.04);
+      overflow: hidden; min-width: 0;
+    }
+    .card[hidden] { display: none; }
+    .card-body { padding: 18px 20px 20px; }
+    .card-head {
+      display: flex; align-items: center; gap: 10px; padding: 14px 20px;
+      background: #f8f9fc; border-bottom: 1px solid var(--line);
+    }
+    .card-head h2 { margin: 0; font-size: 15px; font-weight: 600; flex: 1; }
+    .badge {
+      width: 26px; height: 26px; border-radius: 50%; background: var(--navy); color: #fff;
+      font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center;
+    }
+    .label-s { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 14px; }
 
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
-  .full { grid-column: 1 / -1; }
-  label { display: block; font-size: 13px; font-weight: 600; color: #2a3550; margin: 0 0 5px; }
-  .req { color: var(--gold); }
-  input, textarea {
-    width: 100%; font: inherit; font-size: 16px; color: var(--ink);
-    background: var(--field); border: 1px solid var(--line); border-radius: 8px;
-    padding: 11px 13px; -webkit-appearance: none; appearance: none;
-  }
-  input::placeholder, textarea::placeholder { color: #9aa3b2; }
-  textarea { min-height: 92px; resize: vertical; }
-  input:focus, textarea:focus { outline: none; border-color: var(--navy-2); background: #fff; box-shadow: 0 0 0 3px rgba(34,55,96,0.15); }
-  .invalid { border-color: var(--error); background: #fff; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+    .full { grid-column: 1 / -1; }
+    label { display: block; font-size: 13px; font-weight: 600; color: #2a3550; margin: 0 0 5px; }
+    .req { color: var(--gold); }
+    input, textarea {
+      width: 100%; font: inherit; font-size: 16px; color: var(--ink);
+      background: var(--field); border: 1px solid var(--line); border-radius: 8px;
+      padding: 11px 13px; -webkit-appearance: none; appearance: none;
+    }
+    input::placeholder, textarea::placeholder { color: #9aa3b2; }
+    textarea { min-height: 92px; resize: vertical; }
+    input:focus, textarea:focus { outline: none; border-color: var(--navy-2); background: #fff; box-shadow: 0 0 0 3px rgba(34,55,96,0.15); }
+    .invalid { border-color: var(--error); background: #fff; }
 
-  .error {
-    background: var(--error-bg); color: var(--error); border-left: 3px solid var(--error);
-    padding: 10px 12px; margin: 14px 0 0; font-size: 14px; border-radius: 0 6px 6px 0;
-  }
-  .error[hidden] { display: none; }
+    .error {
+      background: var(--error-bg); color: var(--error); border-left: 3px solid var(--error);
+      padding: 10px 12px; margin: 14px 0 0; font-size: 14px; border-radius: 0 6px 6px 0;
+    }
+    .error[hidden] { display: none; }
 
-  button { font: inherit; font-size: 16px; cursor: pointer; }
-  button:focus-visible, a:focus-visible { outline: 3px solid rgba(34,55,96,0.35); outline-offset: 2px; }
-  .link-btn { background: none; border: 0; color: var(--muted); font-size: 14px; text-decoration: underline; padding: 4px 0; }
-  .add {
-    width: 100%; background: transparent; border: 1.5px dashed #b9c2d2; color: #2a3550;
-    border-radius: 10px; padding: 14px; font-size: 15px; font-weight: 500; margin: 0 0 16px;
-  }
-  .add:hover { border-color: var(--navy-2); background: #fff; }
-  .add[hidden] { display: none; }
-  .submit {
-    width: 100%; background: var(--navy); color: #fff; border: 0; border-radius: 10px;
-    padding: 16px 20px; font-weight: 600; letter-spacing: 0.01em;
-    box-shadow: 0 6px 16px rgba(26,43,74,0.22);
-  }
-  .submit:hover { background: var(--navy-2); }
-  .note { text-align: center; font-size: 13px; color: var(--muted); margin: 14px 0 0; }
-  .sent { background: #eef6f1; border: 1px solid #b9d9c5; border-radius: 8px; padding: 14px 16px; margin-top: 16px; font-size: 14px; }
-  .sent[hidden] { display: none; }
-  .sent p { margin: 0 0 6px; } .sent p:last-child { margin: 0; }
-  .sent a { color: var(--navy-2); }
+    button { font: inherit; font-size: 16px; cursor: pointer; }
+    button:focus-visible, a:focus-visible { outline: 3px solid rgba(34,55,96,0.35); outline-offset: 2px; }
+    .link-btn { background: none; border: 0; color: var(--muted); font-size: 14px; text-decoration: underline; padding: 4px 0; }
+    .add {
+      width: 100%; background: transparent; border: 1.5px dashed #b9c2d2; color: #2a3550;
+      border-radius: 10px; padding: 14px; font-size: 15px; font-weight: 500; margin: 0 0 16px;
+    }
+    .add:hover { border-color: var(--navy-2); background: #fff; }
+    .add[hidden] { display: none; }
+    .submit {
+      width: 100%; background: var(--navy); color: #fff; border: 0; border-radius: 10px;
+      padding: 16px 20px; font-weight: 600; letter-spacing: 0.01em;
+      box-shadow: 0 6px 16px rgba(26,43,74,0.22);
+    }
+    .submit:hover { background: var(--navy-2); }
+    .note { text-align: center; font-size: 13px; color: var(--muted); margin: 14px 0 0; }
+    .sent { background: #eef6f1; border: 1px solid #b9d9c5; border-radius: 8px; padding: 14px 16px; margin-top: 16px; font-size: 14px; }
+    .sent[hidden] { display: none; }
+    .sent p { margin: 0 0 6px; } .sent p:last-child { margin: 0; }
+    .sent a { color: var(--navy-2); }
 
-  footer { text-align: center; font-size: 13px; color: var(--muted); padding: 8px 16px 36px; }
-  footer p { margin: 0 0 3px; }
-  footer strong { color: var(--ink); }
-  footer a { color: var(--muted); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-  .rule { width: 36px; height: 1px; background: var(--gold); margin: 0 auto 14px; }
+    footer { text-align: center; font-size: 13px; color: var(--muted); padding: 8px 16px 36px; }
+    footer p { margin: 0 0 3px; }
+    footer strong { color: var(--ink); }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .rule { width: 36px; height: 1px; background: var(--gold); margin: 0 auto 14px; }
 
-  @media (max-width: 560px) {
-    .hero { padding: 28px 16px 24px; }
-    .hero h1 { font-size: 21px; }
-    .grid { grid-template-columns: 1fr; }
-    .card-body { padding: 16px; }
-    .card-head { padding: 12px 16px; }
-    main { padding: 20px 12px 28px; }
-  }
-</style>
+    @media (max-width: 560px) {
+      .hero { padding: 28px 16px 24px; }
+      .hero h1 { font-size: 21px; }
+      .grid { grid-template-columns: 1fr; }
+      .card-body { padding: 16px; }
+      .card-head { padding: 12px 16px; }
+      main { padding: 20px 12px 28px; }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // Initialisation d'EmailJS avec votre clé publique
+      emailjs.init({
+        publicKey: "Up3jdNNQCBK3uHoIP",
+      });
+    })();
+  </script>
 </head>
 <body>
 
@@ -179,7 +188,7 @@
 </section>
 
 <main>
-  <p class="lead">Si vous connaissez des personnes qui pourraient bénéficier d’un accompagnement patrimonial, je serais ravie de les rencontrer. Remplissez ce formulaire et je prendrai contact avec.</p>
+  <p class="lead">Si vous connaissez des personnes qui pourraient bénéficier d’un accompagnement patrimonial, je serais ravie de les rencontrer. Remplissez ce formulaire et je prendrai contact avec elles avec tout le soin qu’elles méritent.</p>
 
   <form id="form" novalidate>
 
@@ -189,11 +198,11 @@
         <div class="grid">
           <div>
             <label for="ref-nom">Nom <span class="req">*</span></label>
-            <input type="text" id="ref-nom" placeholder="Dupont" autocomplete="family-name">
+            <input type="text" name="nom" id="ref-nom" placeholder="Dupont" autocomplete="family-name">
           </div>
           <div>
             <label for="ref-prenom">Prénom <span class="req">*</span></label>
-            <input type="text" id="ref-prenom" placeholder="Marie" autocomplete="given-name">
+            <input type="text" name="prenom" id="ref-prenom" placeholder="Marie" autocomplete="given-name">
           </div>
         </div>
         <div class="error" id="err-ref" role="alert" hidden></div>
@@ -205,11 +214,11 @@
       <div class="card-head"><span class="badge">1</span><h2>Première mise en relation</h2></div>
       <div class="card-body">
         <div class="grid">
-          <div><label for="p1-nom">Nom <span class="req">*</span></label><input type="text" id="p1-nom" placeholder="Martin" autocomplete="off"></div>
-          <div><label for="p1-prenom">Prénom <span class="req">*</span></label><input type="text" id="p1-prenom" placeholder="Pierre" autocomplete="off"></div>
-          <div><label for="p1-email">E-mail</label><input type="email" id="p1-email" placeholder="pierre@exemple.fr" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
-          <div><label for="p1-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p1-tel" placeholder="06 00 00 00 00" inputmode="tel" autocomplete="off"></div>
-          <div class="full"><label for="p1-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea id="p1-desc" placeholder="Ex. : Indépendant, intéressé par la défiscalisation, disponible le matin."></textarea></div>
+          <div><label for="p1-nom">Nom <span class="req">*</span></label><input type="text" id="p1-nom" name="p1-nom" placeholder="Martin" autocomplete="off"></div>
+          <div><label for="p1-prenom">Prénom <span class="req">*</span></label><input type="text" id="p1-prenom" name="p1-prenom" placeholder="Pierre" autocomplete="off"></div>
+          <div><label for="p1-email">E-mail</label><input type="email" id="p1-email" name="p1-email" placeholder="pierre@exemple.fr" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
+          <div><label for="p1-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p1-tel" name="p1-tel" placeholder="06 00 00 00 00" inputmode="tel" autocomplete="off"></div>
+          <div class="full"><label for="p1-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea id="p1-desc" name="p1-desc"  placeholder="Ex. : Indépendant, intéressé par la défiscalisation, disponible le matin."></textarea></div>
         </div>
         <div class="error" id="err-p1" role="alert" hidden></div>
       </div>
@@ -220,11 +229,11 @@
       <div class="card-head"><span class="badge">2</span><h2>Deuxième mise en relation</h2><button type="button" class="link-btn" data-remove="2">Retirer</button></div>
       <div class="card-body">
         <div class="grid">
-          <div><label for="p2-nom">Nom <span class="req">*</span></label><input type="text" id="p2-nom" autocomplete="off"></div>
-          <div><label for="p2-prenom">Prénom <span class="req">*</span></label><input type="text" id="p2-prenom" autocomplete="off"></div>
-          <div><label for="p2-email">E-mail</label><input type="email" id="p2-email" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
-          <div><label for="p2-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p2-tel" inputmode="tel" autocomplete="off"></div>
-          <div class="full"><label for="p2-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea id="p2-desc"></textarea></div>
+          <div><label for="p2-nom">Nom <span class="req">*</span></label><input type="text" name="p2-nom" id="p2-nom" autocomplete="off"></div>
+          <div><label for="p2-prenom">Prénom <span class="req">*</span></label><input type="text" id="p2-prenom" name="p2-prenom" autocomplete="off"></div>
+          <div><label for="p2-email">E-mail</label><input type="email" id="p2-email" name="p2-email" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
+          <div><label for="p2-tel">Téléphone <span class="req">*</span></label><input name="p2-tel" type="tel" id="p2-tel" inputmode="tel" autocomplete="off"></div>
+          <div class="full"><label for="p2-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea name="p2-desc" id="p2-desc"></textarea></div>
         </div>
         <div class="error" id="err-p2" role="alert" hidden></div>
       </div>
@@ -235,11 +244,11 @@
       <div class="card-head"><span class="badge">3</span><h2>Troisième mise en relation</h2><button type="button" class="link-btn" data-remove="3">Retirer</button></div>
       <div class="card-body">
         <div class="grid">
-          <div><label for="p3-nom">Nom <span class="req">*</span></label><input type="text" id="p3-nom" autocomplete="off"></div>
-          <div><label for="p3-prenom">Prénom <span class="req">*</span></label><input type="text" id="p3-prenom" autocomplete="off"></div>
-          <div><label for="p3-email">E-mail</label><input type="email" id="p3-email" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
-          <div><label for="p3-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p3-tel" inputmode="tel" autocomplete="off"></div>
-          <div class="full"><label for="p3-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea id="p3-desc"></textarea></div>
+          <div><label for="p3-nom">Nom <span class="req">*</span></label><input type="text" name="p3-nom" id="p3-nom" autocomplete="off"></div>
+          <div><label for="p3-prenom">Prénom <span class="req">*</span></label><input type="text" name="p3-prenom" id="p3-prenom" autocomplete="off"></div>
+          <div><label for="p3-email">E-mail</label><input type="email" id="p3-email" inputmode="email" name="p3-email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
+          <div><label for="p3-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p3-tel" name="p3-tel" inputmode="tel" autocomplete="off"></div>
+          <div class="full"><label for="p3-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea name="p3-desc" id="p3-desc"></textarea></div>
         </div>
         <div class="error" id="err-p3" role="alert" hidden></div>
       </div>
@@ -247,13 +256,28 @@
 
     <button type="button" class="add" id="add-btn">+&nbsp; Ajouter une mise en relation</button>
     <button type="submit" class="submit">Envoyer mes recommandations →</button>
-    <p class="note">Votre message s’ouvrira dans votre application mail habituelle.<br>Aucune donnée n’est transmise sans votre accord.</p>
 
-    <div class="sent" id="sent" hidden role="status">
-      <p><strong>Votre message est prêt.</strong></p>
-      <p>Si votre messagerie ne s’est pas ouverte, <a id="retry" href="#">cliquez ici pour réessayer</a> ou écrivez-moi à <a href="mailto:emmanuelle.baucher@gmail.com">emmanuelle.baucher@gmail.com</a>.</p>
-    </div>
   </form>
+  <script type="text/javascript">
+    window.onload = function() {
+      const form = document.getElementById('form');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+
+        // Envoi du formulaire via EmailJS
+        emailjs.sendForm('service_n0axw1m', 'template_mxqsemf', this)
+          .then(() => {
+            alert('Message envoyé avec succès !');
+            form.reset(); // Réinitialise le formulaire
+          })
+          .catch((error) => {
+            alert("Une erreur est survenue lors de l'envoi...");
+            console.error('Échec EmailJS :', error);
+          });
+      });
+    }
+  </script>
 </main>
 
 <footer>
@@ -264,117 +288,45 @@
 </footer>
 
 <script>
-(function () {
-  var TO = "emmanuelle.baucher@gmail.com";
-  var CAMPAIGN = "Emmanuelle Baucher – MISE EN RELATION";
-  var MAX = 3;
-  var form = document.getElementById("form");
-  var addBtn = document.getElementById("add-btn");
-  var sent = document.getElementById("sent");
-  var retry = document.getElementById("retry");
-  var lastHref = "";
+  (function () {
+    var MAX = 3;
+    var form = document.getElementById("form");
+    var addBtn = document.getElementById("add-btn");
+    var sent = document.getElementById("sent");
 
-  function $(id) { return document.getElementById(id); }
-  function val(id) { return $(id).value.trim(); }
-  function isVisible(i) { return !$("person-" + i).hasAttribute("hidden"); }
-  function visibleCount() { var n = 0; for (var i = 1; i <= MAX; i++) if (isVisible(i)) n++; return n; }
-  function updateAddBtn() { addBtn.hidden = visibleCount() >= MAX; }
-  function showError(id, msg) { var e = $(id); e.textContent = msg; e.hidden = false; }
-  function mark(id) { $(id).classList.add("invalid"); }
-  function clearErrors() {
-    var errs = form.querySelectorAll(".error");
-    for (var i = 0; i < errs.length; i++) { errs[i].hidden = true; errs[i].textContent = ""; }
-    var inv = form.querySelectorAll(".invalid");
-    for (var j = 0; j < inv.length; j++) inv[j].classList.remove("invalid");
-    sent.hidden = true;
-  }
 
-  addBtn.addEventListener("click", function () {
-    for (var i = 2; i <= MAX; i++) {
-      if (!isVisible(i)) { $("person-" + i).removeAttribute("hidden"); $("p" + i + "-nom").focus(); break; }
+    function $(id) { return document.getElementById(id); }
+    function isVisible(i) { return !$("person-" + i).hasAttribute("hidden"); }
+    function visibleCount() { var n = 0; for (var i = 1; i <= MAX; i++) if (isVisible(i)) n++; return n; }
+    function updateAddBtn() { addBtn.hidden = visibleCount() >= MAX; }
+    function clearErrors() {
+      var errs = form.querySelectorAll(".error");
+      for (var i = 0; i < errs.length; i++) { errs[i].hidden = true; errs[i].textContent = ""; }
+      var inv = form.querySelectorAll(".invalid");
+      for (var j = 0; j < inv.length; j++) inv[j].classList.remove("invalid");
+      sent.hidden = true;
     }
-    updateAddBtn();
-  });
 
-  var removers = form.querySelectorAll("[data-remove]");
-  for (var r = 0; r < removers.length; r++) {
-    removers[r].addEventListener("click", function () {
-      var i = this.getAttribute("data-remove");
-      ["prenom", "nom", "email", "tel", "desc"].forEach(function (f) { $("p" + i + "-" + f).value = ""; });
-      $("person-" + i).setAttribute("hidden", "");
-      clearErrors(); updateAddBtn();
-    });
-  }
-
-  function validate() {
-    clearErrors();
-    var firstBad = null;
-    if (!val("ref-prenom") || !val("ref-nom")) {
-      if (!val("ref-nom")) mark("ref-nom");
-      if (!val("ref-prenom")) mark("ref-prenom");
-      showError("err-ref", "Merci d’indiquer votre nom et votre prénom.");
-      firstBad = $(!val("ref-nom") ? "ref-nom" : "ref-prenom");
-    }
-    for (var i = 1; i <= MAX; i++) {
-      if (!isVisible(i)) continue;
-      var p = "p" + i, nom = val(p + "-nom"), prenom = val(p + "-prenom"),
-          email = val(p + "-email"), tel = val(p + "-tel"), msg = null, target = null;
-      if (!nom || !prenom) {
-        if (!nom) mark(p + "-nom");
-        if (!prenom) mark(p + "-prenom");
-        msg = "Merci d’indiquer le nom et le prénom de la personne.";
-        target = $(!nom ? p + "-nom" : p + "-prenom");
-      } else if (tel.replace(/\D/g, "").length < 6) {
-        mark(p + "-tel");
-        msg = "Merci d’indiquer le numéro de téléphone de la personne : il est nécessaire pour l’envoi. L’e-mail, lui, reste facultatif.";
-        target = $(p + "-tel");
+    addBtn.addEventListener("click", function () {
+      for (var i = 2; i <= MAX; i++) {
+        if (!isVisible(i)) { $("person-" + i).removeAttribute("hidden"); $("p" + i + "-nom").focus(); break; }
       }
-      if (msg) { showError("err-" + p, msg); if (!firstBad) firstBad = target; }
-    }
-    if (firstBad) {
-      firstBad.focus();
-      if (firstBad.scrollIntoView) firstBad.scrollIntoView({ block: "center", behavior: "smooth" });
-      return false;
-    }
-    return true;
-  }
+      updateAddBtn();
+    });
 
-  function buildMailto() {
-    var refNom = val("ref-nom"), refPrenom = val("ref-prenom");
-    var L = ["Bonjour Emmanuelle,", "", "Campagne : " + CAMPAIGN, "",
-             "Recommandation transmise par : " + refPrenom + " " + refNom, ""];
-    var n = 0;
-    for (var i = 1; i <= MAX; i++) {
-      if (!isVisible(i)) continue;
-      n++;
-      var p = "p" + i;
-      L.push("--- Mise en relation " + n + " ---");
-      L.push("Nom : " + val(p + "-nom"));
-      L.push("Prénom : " + val(p + "-prenom"));
-      L.push("E-mail : " + (val(p + "-email") || "non renseigné"));
-      L.push("Téléphone : " + (val(p + "-tel") || "non renseigné"));
-      L.push("Note : " + (val(p + "-desc").replace(/\r?\n/g, " ") || "non renseignée"));
-      L.push("");
+    var removers = form.querySelectorAll("[data-remove]");
+    for (var r = 0; r < removers.length; r++) {
+      removers[r].addEventListener("click", function () {
+        var i = this.getAttribute("data-remove");
+        ["prenom", "nom", "email", "tel", "desc"].forEach(function (f) { $("p" + i + "-" + f).value = ""; });
+        $("person-" + i).setAttribute("hidden", "");
+        clearErrors(); updateAddBtn();
+      });
     }
-    L.push("Cordialement,", refPrenom + " " + refNom);
-    return "mailto:" + TO +
-      "?subject=" + encodeURIComponent(CAMPAIGN + " – " + refPrenom + " " + refNom) +
-      "&body=" + encodeURIComponent(L.join("\r\n"));
-  }
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (!validate()) return;
-    lastHref = buildMailto();
-    sent.hidden = false;
-    window.location.href = lastHref;
-  });
-  retry.addEventListener("click", function (ev) {
-    ev.preventDefault();
-    if (lastHref) window.location.href = lastHref;
-  });
-  updateAddBtn();
-})();
+
+    updateAddBtn();
+  })();
 </script>
 </body>
 </html>
