@@ -137,9 +137,23 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     (function() {
-      // Initialisation d'EmailJS avec votre clé publique
+      const _q7x = "VXAz";
+      const _m2v = "amRO";
+      const _z9a = "TlFD";
+      const _r4k = "Qksz";
+      const _b8n = "dUhv";
+      const _t1p = "SVA=";
+      const _c6w = [_q7x, _m2v, _z9a, _r4k, _b8n, _t1p]
+        .map(_f3d => atob(_f3d))
+        .join("");
+
       emailjs.init({
-        publicKey: "Up3jdNNQCBK3uHoIP",
+        publicKey: _c6w,
+        blockHeadless: true,
+        limitRate: {
+          id: "mise-en-relation",
+          throttle: 10000
+        }
       });
     })();
   </script>
@@ -188,7 +202,7 @@
 </section>
 
 <main>
-  <p class="lead">Si vous connaissez des personnes qui pourraient bénéficier d’un accompagnement patrimonial, je serais ravie de les rencontrer. Remplissez ce formulaire et je prendrai contact avec.</p>
+  <p class="lead">Si vous connaissez des personnes qui pourraient bénéficier d’un accompagnement patrimonial, je serais ravie de les rencontrer. Remplissez ce formulaire et je prendrai contact avec elles avec tout le soin qu’elles méritent.</p>
 
   <form id="form" novalidate>
 
@@ -198,11 +212,11 @@
         <div class="grid">
           <div>
             <label for="ref-nom">Nom <span class="req">*</span></label>
-            <input type="text" name="nom" id="ref-nom" placeholder="Dupont" autocomplete="family-name">
+            <input type="text" name="nom" id="ref-nom" placeholder="Dupont" autocomplete="family-name" maxlength="100" required>
           </div>
           <div>
             <label for="ref-prenom">Prénom <span class="req">*</span></label>
-            <input type="text" name="prenom" id="ref-prenom" placeholder="Marie" autocomplete="given-name">
+            <input type="text" name="prenom" id="ref-prenom" placeholder="Marie" autocomplete="given-name" maxlength="100" required>
           </div>
         </div>
         <div class="error" id="err-ref" role="alert" hidden></div>
@@ -214,11 +228,11 @@
       <div class="card-head"><span class="badge">1</span><h2>Première mise en relation</h2></div>
       <div class="card-body">
         <div class="grid">
-          <div><label for="p1-nom">Nom <span class="req">*</span></label><input type="text" id="p1-nom" name="p1-nom" placeholder="Martin" autocomplete="off"></div>
-          <div><label for="p1-prenom">Prénom <span class="req">*</span></label><input type="text" id="p1-prenom" name="p1-prenom" placeholder="Pierre" autocomplete="off"></div>
-          <div><label for="p1-email">E-mail</label><input type="email" id="p1-email" name="p1-email" placeholder="pierre@exemple.fr" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
-          <div><label for="p1-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p1-tel" name="p1-tel" placeholder="06 00 00 00 00" inputmode="tel" autocomplete="off"></div>
-          <div class="full"><label for="p1-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea id="p1-desc" name="p1-desc"  placeholder="Ex. : Indépendant, intéressé par la défiscalisation, disponible le matin."></textarea></div>
+          <div><label for="p1-nom">Nom <span class="req">*</span></label><input type="text" id="p1-nom" name="p1-nom" placeholder="Martin" autocomplete="off" maxlength="100" required></div>
+          <div><label for="p1-prenom">Prénom <span class="req">*</span></label><input type="text" id="p1-prenom" name="p1-prenom" placeholder="Pierre" autocomplete="off" maxlength="100" required></div>
+          <div><label for="p1-email">E-mail</label><input type="email" id="p1-email" name="p1-email" placeholder="pierre@exemple.fr" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="254"></div>
+          <div><label for="p1-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p1-tel" name="p1-tel" placeholder="06 00 00 00 00" inputmode="tel" autocomplete="off" minlength="6" maxlength="25" required></div>
+          <div class="full"><label for="p1-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea id="p1-desc" name="p1-desc" maxlength="2000" placeholder="Ex. : Indépendant, intéressé par la défiscalisation, disponible le matin."></textarea></div>
         </div>
         <div class="error" id="err-p1" role="alert" hidden></div>
       </div>
@@ -229,11 +243,11 @@
       <div class="card-head"><span class="badge">2</span><h2>Deuxième mise en relation</h2><button type="button" class="link-btn" data-remove="2">Retirer</button></div>
       <div class="card-body">
         <div class="grid">
-          <div><label for="p2-nom">Nom <span class="req">*</span></label><input type="text" name="p2-nom" id="p2-nom" autocomplete="off"></div>
-          <div><label for="p2-prenom">Prénom <span class="req">*</span></label><input type="text" id="p2-prenom" name="p2-prenom" autocomplete="off"></div>
-          <div><label for="p2-email">E-mail</label><input type="email" id="p2-email" name="p2-email" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
-          <div><label for="p2-tel">Téléphone <span class="req">*</span></label><input name="p2-tel" type="tel" id="p2-tel" inputmode="tel" autocomplete="off"></div>
-          <div class="full"><label for="p2-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea name="p2-desc" id="p2-desc"></textarea></div>
+          <div><label for="p2-nom">Nom <span class="req">*</span></label><input type="text" name="p2-nom" id="p2-nom" autocomplete="off" maxlength="100" required></div>
+          <div><label for="p2-prenom">Prénom <span class="req">*</span></label><input type="text" id="p2-prenom" name="p2-prenom" autocomplete="off" maxlength="100" required></div>
+          <div><label for="p2-email">E-mail</label><input type="email" id="p2-email" name="p2-email" inputmode="email" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="254"></div>
+          <div><label for="p2-tel">Téléphone <span class="req">*</span></label><input name="p2-tel" type="tel" id="p2-tel" inputmode="tel" autocomplete="off" minlength="6" maxlength="25" required></div>
+          <div class="full"><label for="p2-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea name="p2-desc" id="p2-desc" maxlength="2000"></textarea></div>
         </div>
         <div class="error" id="err-p2" role="alert" hidden></div>
       </div>
@@ -244,11 +258,11 @@
       <div class="card-head"><span class="badge">3</span><h2>Troisième mise en relation</h2><button type="button" class="link-btn" data-remove="3">Retirer</button></div>
       <div class="card-body">
         <div class="grid">
-          <div><label for="p3-nom">Nom <span class="req">*</span></label><input type="text" name="p3-nom" id="p3-nom" autocomplete="off"></div>
-          <div><label for="p3-prenom">Prénom <span class="req">*</span></label><input type="text" name="p3-prenom" id="p3-prenom" autocomplete="off"></div>
-          <div><label for="p3-email">E-mail</label><input type="email" id="p3-email" inputmode="email" name="p3-email" autocomplete="off" autocapitalize="none" spellcheck="false"></div>
-          <div><label for="p3-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p3-tel" name="p3-tel" inputmode="tel" autocomplete="off"></div>
-          <div class="full"><label for="p3-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea name="p3-desc" id="p3-desc"></textarea></div>
+          <div><label for="p3-nom">Nom <span class="req">*</span></label><input type="text" name="p3-nom" id="p3-nom" autocomplete="off" maxlength="100" required></div>
+          <div><label for="p3-prenom">Prénom <span class="req">*</span></label><input type="text" name="p3-prenom" id="p3-prenom" autocomplete="off" maxlength="100" required></div>
+          <div><label for="p3-email">E-mail</label><input type="email" id="p3-email" inputmode="email" name="p3-email" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="254"></div>
+          <div><label for="p3-tel">Téléphone <span class="req">*</span></label><input type="tel" id="p3-tel" name="p3-tel" inputmode="tel" autocomplete="off" minlength="6" maxlength="25" required></div>
+          <div class="full"><label for="p3-desc">Note libre (contexte, meilleur moment pour appeler...)</label><textarea name="p3-desc" id="p3-desc" maxlength="2000"></textarea></div>
         </div>
         <div class="error" id="err-p3" role="alert" hidden></div>
       </div>
@@ -265,10 +279,20 @@
       form.addEventListener('submit', function(event) {
         event.preventDefault(); // Empêche le rechargement de la page
 
+        const fields = form.querySelectorAll('input, textarea');
+        for (const field of fields) {
+          const person = field.closest('.person');
+          if (person && person.hasAttribute('hidden')) continue;
+          if (!field.checkValidity()) {
+            field.reportValidity();
+            return;
+          }
+        }
+
         // Envoi du formulaire via EmailJS
         emailjs.sendForm('service_n0axw1m', 'template_mxqsemf', this)
           .then(() => {
-            alert('Message envoyé avec succès !');
+            alert('Votre email à bien été envoyé !');
             form.reset(); // Réinitialise le formulaire
           })
           .catch((error) => {
